@@ -8,7 +8,7 @@ public class Toilet {
         this.currentXPosition = 1;
         this.currentYPosition = 1;
     }
-    
+
     /**
      * @param directions
      * @return Returns a number of a key
@@ -20,28 +20,20 @@ public class Toilet {
         for (int i = 0; i < direction.length; i++) {
                 switch (direction[i]) {
                     case 'U':
-                        if (currentYPosition == 0)
-                            break;
-                        else
+                        if (currentYPosition != 0)
                             currentYPosition -= 1;
-                        break;
+                            break;
                     case 'D':
-                        if (currentYPosition == 2)
-                            break;
-                        else
+                        if (currentYPosition != 2)
                             currentYPosition += 1;
-                        break;
-                    case 'L':
-                        if (currentXPosition == 0)
-                        break;
-                        else
-                            currentXPosition -= 1;
-                        break;
-                    case 'R':
-                        if (currentXPosition == 2)
                             break;
-                        else
-                            currentXPosition += 1;
+                    case 'L':
+                        if (currentXPosition != 0)
+                            currentXPosition -= 1;
+                            break;
+                    case 'R':
+                        if (currentXPosition != 2)
+                        currentXPosition += 1;
                         break;
                 }
         }
